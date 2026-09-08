@@ -1,0 +1,79 @@
+manifestVersion: 1.1
+id: tyger-datum
+category: bitcoin
+name: Tyger DATUM
+version: "v0.4.1-beta-5-tyger.0-test"
+icon: https://tygerpool.com/logo.svg
+tagline: Pool-mine BLAKE2b Bitcoin on DATUM — you build the blocks, paid straight to your wallet
+description: >-
+  Mine on Tyger Pool the sovereign way. This app runs a DATUM gateway on your Umbrel, connected to
+  your own Bitcoin Knots node, so YOU build your own block templates — nobody picks your transactions
+  for you. Every block the pool finds pays you directly in the block's coinbase, to your own address.
+  Tyger never holds your coins.
+
+
+  Tyger Pool is DATUM-only by conviction: no stratum port, no custodial balance, no "trust us".
+  TEST BUILD: this version runs in SOLO mode while Tyger's DATUM server finishes launch testing — install, add your address, point a miner, and you are genuinely solo mining (a solo block pays your address 100%). The pool connection arrives as a normal app update at launch.
+
+
+  🛠️ SET-UP (three things)
+
+
+  ### 1. Your node
+  This app connects automatically to your Bitcoin Knots app. Knots must be on the BIP-110 / BLAKE2b
+  version (Umbrel's Bitcoin Knots app, v29.4 or later). Pruning is fine.
+
+
+  ### 2. Your payout address
+  Open this app → "Config" tab → put your bc1… address in "pool_address" → Save. That is the address
+  every block pays. The in-app login is under right-click the app icon → "Show default credentials".
+  (Safari can't edit the config — use another browser.)
+
+
+  ### 3. Your miner
+  In your miner's pool settings:
+
+    - URL: stratum+tcp://YOUR-UMBREL-IP:23341   (your Umbrel's IP is under Settings)
+
+    - Worker / username: anything, e.g. rig1 — it's just a label; your Config address decides where
+      the coins go.
+
+    - Password: anything.
+
+
+  Check it's working: this app's page shows "Connected" to the pool and your miner's hashrate.
+  Stuck? Tyger Discord → https://discord.gg/BVD4EHuPCT (drops you in #getting-started).
+developer: Tyger Pool
+website: https://tygerpool.com
+dependencies:
+  - bitcoin-knots
+repo: https://github.com/innerhat-dev/datum_gateway
+support: https://discord.gg/BVD4EHuPCT
+port: 21011
+gallery:
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/datum/1.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/datum/2.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/datum/3.jpg
+path: ""
+defaultUsername: "admin"
+deterministicPassword: true
+releaseNotes: >-
+  Pre-launch test build (solo mode). The Tyger pool connection ships as an app update at launch.
+widgets:
+  - id: "stats"
+    type: "three-stats"
+    refresh: "30s"
+    endpoint: "datum:21011/umbrel-api"
+    link: ""
+    example:
+      type: "three-stats"
+      link: ""
+      items:
+        - title: "Connections"
+          text: "12"
+          subtext: "Worker"
+        - title: "Hashrate"
+          text: "21"
+          subtext: "TH/s"
+submitter: Tyger Pool
+submission: https://github.com/tygerpool/umbrel-store
