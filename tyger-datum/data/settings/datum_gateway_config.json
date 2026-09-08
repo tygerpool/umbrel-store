@@ -1,0 +1,32 @@
+{
+  "bitcoind": {
+    "rpcuser": "auto-configure-on-install",
+    "rpcpassword": "auto-configure-on-install",
+    "rpcurl": "auto-configure-on-install"
+  },
+  "api": {
+    "listen_port": 21011,
+    "modify_conf": true,
+    "admin_password": "umbrel"
+  },
+  "mining": {
+    "pool_address": "",
+    "coinbase_tag_primary": "Tyger DATUM",
+    "coinbase_tag_secondary": "on Umbrel",
+    "pow_algorithm": "blake2b"
+  },
+  "stratum": {
+    "listen_port": 23341
+  },
+  "logger": {
+    "log_level_console": 2
+  },
+  "datum": {
+    "pool_host": "",
+    "pool_port": 28915,
+    "pool_pubkey": "",
+    "pool_pass_workers": true,
+    "pool_pass_full_users": false,
+    "pooled_mining_only": false
+  }
+}
