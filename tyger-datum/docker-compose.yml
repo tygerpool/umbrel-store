@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: tyger-datum_datum_1
+      APP_PORT: 21011
+
+  datum:
+    image: ghcr.io/retropex/datum:v1.14-blake2b-3@sha256:3fe16bb90a0bb846f46e6915d9f9c6bb352f1a193f27148a07e90b86b213adf0
+    entrypoint: ["/app/datum_gateway"]
+    command: ["--config=/app/conf/datum_gateway_config.json"]
+    user: 1000:1000
+    restart: on-failure
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    volumes:
+      - ${APP_DATA_DIR}/data/settings/:/app/conf/
+    ports:
+      - 23341:23341
