@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: tyger-datum
 category: bitcoin
 name: Tyger DATUM
-version: "v0.4.1-beta-5-tyger.0-test"
+version: "v0.4.1-beta-5-tyger.1"
 icon: https://tygerpool.com/logo.svg
 tagline: Pool-mine BLAKE2b Bitcoin on DATUM — you build the blocks, paid straight to your wallet
 description: >-
@@ -13,7 +13,8 @@ description: >-
 
 
   Tyger Pool is DATUM-only by conviction: no stratum port, no custodial balance, no "trust us".
-  TEST BUILD: this version runs in SOLO mode while Tyger's DATUM server finishes launch testing — install, add your address, point a miner, and you are genuinely solo mining (a solo block pays your address 100%). The pool connection arrives as a normal app update at launch.
+  One-click app, pre-set for Tyger — the only thing you type is your payout address. Built on Retropex's DATUM image (thank you, Retropex).
+  CURRENT BUILD runs in SOLO mode (a solo block pays your address 100%). The pool-mode update ships as a normal app update once the payout-fix gateway build is in the app image.
 
 
   🛠️ SET-UP (three things)
@@ -58,7 +59,7 @@ path: ""
 defaultUsername: "admin"
 deterministicPassword: true
 releaseNotes: >-
-  Pre-launch test build (solo mode). The Tyger pool connection ships as an app update at launch.
+  Solo mode. Pool-mode update coming — waiting on a gateway image with the payout-coinbase fix. 0% launch fee stands.
 widgets:
   - id: "stats"
     type: "three-stats"
