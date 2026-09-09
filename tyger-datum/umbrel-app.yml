@@ -59,7 +59,7 @@ path: ""
 defaultUsername: "admin"
 deterministicPassword: true
 releaseNotes: >-
-  Solo mode. Pool-mode update coming — waiting on a gateway image with the payout-coinbase fix. 0% launch fee stands.
+  Pool mode live, on Tyger's own gateway image with the payout-coinbase fix (innerhat 4cd17a0). 0% launch fee.
 widgets:
   - id: "stats"
     type: "three-stats"

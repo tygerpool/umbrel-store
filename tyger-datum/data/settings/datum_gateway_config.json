@@ -22,11 +22,11 @@
     "log_level_console": 2
   },
   "datum": {
-    "pool_host": "",
+    "pool_host": "tygerpool.com",
     "pool_port": 28915,
-    "pool_pubkey": "",
+    "pool_pubkey": "8918e6a6437f9238118da5ce657f90b866dd4d31820d07e798ccd1b8986804ae36d1e494e919fa5e0ba251aec1c631e260f89628ebe6ebafc4b276554f295c3f",
     "pool_pass_workers": true,
     "pool_pass_full_users": false,
-    "pooled_mining_only": false
+    "pooled_mining_only": true
   }
 }
